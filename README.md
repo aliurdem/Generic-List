@@ -90,9 +90,7 @@ public class Main {
 ```
 
 - int indexOf(T data) : Parametrede verilen nesnenin listedeki indeksini verir. Nesne listede yoksa -1 değerini verir.
-- int lastIndexOf(T data) : Belirtilen öğenin listedeki son indeksini söyler. Nesne listede yoksa -1 değerini verir.
 - boolean isEmpty() : Listenin boş olup olmadığını söyler.
-- T[] toArray() : Listedeki öğeleri, aynı sırayla bir array haline getirir.
 - clear() : Listedeki bütün öğeleri siler, boş liste haline getirir.
 - MyList<T> sublist(int start,int finish) : Parametrede verilen indeks aralığına ait bir liste döner.
 - boolean contains(T data) : Parametrede verilen değerin dizide olup olmadığını söyler.
@@ -121,15 +119,12 @@ public class Main {
         // Bulamazsa -1 döndürür
         System.out.println("Indeks :" + liste.indexOf(100));
 
-        // Bulduğu son indeksi verir
-        System.out.println("Indeks : " + liste.lastIndexOf(20));
-
         // Listeyi Object[] dizisi olarak geri verir.
         Object[] dizi = liste.toArray();
         System.out.println("Object dizisinin ilk elemanı :" + dizi[0]);
 
         // Liste veri türünde alt bir liste oluşturdu
-        MyList<Integer> altListem = liste.subList(0, 3);
+        MyList<Integer> altListem = liste.sublist(0, 3);
         System.out.println(altListem.toString());
 
         // Değerim listedeki olup olmadığını sorguladı
